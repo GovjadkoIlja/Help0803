@@ -1,0 +1,25 @@
+﻿@model MyLibrary.Models.Book
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <p>Название книги: @Html.TextBoxFor(x => x.name) </p>
+            <p>Автор книги: @Html.TextBoxFor(x => x.author)</p>
+            <p>Год выпуска книги: @Html.TextBoxFor(x => x.year)</p>
+            <input type="submit" value="Submit RSVP" />
+        }
+    </div>
+</body>
+</html>
+

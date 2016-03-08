@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MyLibrary.Models.Book>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Print</title>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.year)
+            </th>
+        </tr>
+        @foreach (var mass in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => mass.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => mass.author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => mass.year)
+                </td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>
+
+
+
