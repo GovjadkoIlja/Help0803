@@ -1,4 +1,5 @@
-﻿@model MyLibrary.Models.Book
+﻿@using System.Web.Mvc.Html
+@model MyLibrary.Models.Book
 @{
     Layout = null;
 }
@@ -14,9 +15,9 @@
     <div>
         @using (Html.BeginForm())
         {
-            <p>Название книги: @Html.TextBoxFor(x => x.name) </p>
-            <p>Автор книги: @Html.TextBoxFor(x => x.author)</p>
-            <p>Год выпуска книги: @Html.TextBoxFor(x => x.year)</p>
+            <p>Название книги: @Html.TextBoxFor(x => x.Name) </p>
+            <p>Автор книги: @Html.TextBoxFor(x => x.Author)</p>
+            <p>Год выпуска книги: @Html.TextBoxFor(x => x.Year)</p>
             <input type="submit" value="Submit RSVP" />
         }
     </div>

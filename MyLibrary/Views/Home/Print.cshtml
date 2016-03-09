@@ -1,4 +1,5 @@
-﻿@model IEnumerable<MyLibrary.Models.Book>
+﻿@using System.Web.Mvc.Html
+@model IEnumerable<MyLibrary.Models.Book>
 @{
     Layout = null;
 }
@@ -14,26 +15,26 @@
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.name)
+                @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.author)
+                @Html.DisplayNameFor(model => model.Author)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.year)
+                @Html.DisplayNameFor(model => model.Year)
             </th>
         </tr>
         @foreach (var mass in Model)
             {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => mass.name)
+                    @Html.DisplayFor(modelItem => mass.Name)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => mass.author)
+                    @Html.DisplayFor(modelItem => mass.Author)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => mass.year)
+                    @Html.DisplayFor(modelItem => mass.Year)
                 </td>
             </tr>
         }

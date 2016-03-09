@@ -11,11 +11,11 @@ namespace MyLibrary.Models
     public class BookContext : DbContext
     {
         public BookContext()
-            : base("DbConnection")
+            : base("DefaultConnection")
         { }
 
 
-        public DbSet<Book> books { get; set; }
+        public DbSet<Book> Books { get; set; }
 
         public static BookContext Create()
         {
