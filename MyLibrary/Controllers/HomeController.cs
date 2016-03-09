@@ -14,8 +14,8 @@ namespace MyLibrary.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            Book book1 = new Book { name = "jskajsa]a", author = "jskahdna", year = 1234 };
-            db.books.Add(book1);
+            Book book1 = new Book { Name = "jskajsa]a", Author = "jskahdna", Year = 1234 };
+            db.Books.Add(book1);
             return View();
         }
 
@@ -24,7 +24,7 @@ namespace MyLibrary.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.books.Add(newbook);
+                db.Books.Add(newbook);
                 db.SaveChanges();
             }
             return RedirectToAction("Print");
@@ -32,7 +32,8 @@ namespace MyLibrary.Controllers
 
         public ActionResult Print()
         {
-            return View();
+            var books= db.Books.ToList();
+            return View(books);
         }
     }
 }
